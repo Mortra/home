@@ -1,0 +1,96 @@
+.block{
+    background: lightblue url("background-6556413.jpg") no-repeat fixed center;
+    background-size: 100%;
+}
+
+.clients{
+    background: lightblue url("beach-1751455.jpg") no-repeat fixed center;
+    background-size: 100%;
+}
+
+.contacts{
+    background: lightblue url("water-1330252.jpg") no-repeat fixed center;
+    background-size: 100%;
+}
+
+.h6{
+    color: darkblue;
+}
+
+.about{
+    background: lightblue url("hd-wallpaper-201496.jpg") no-repeat fixed center;
+    background-size: 100%;
+}
+
+.order_form{
+    background: wheat;
+    background-size: 100%;
+}
+/*.southpark{*/
+/*    position: absolute;*/
+/*    top: 80%;*/
+/*    left: 40%;*/
+/*    transform: translate(-50%, -50%);*/
+/*    font-family: cursive;*/
+/*    font-weight: normal;*/
+/*    background: linear-gradient(90deg, black,black) no-repeat;*/
+/*    background-size: 90%;*/
+/*    -webkit-background-clip: text;*/
+/*    -webkit-text-fill-color: transparent;*/
+/*    animation: animate 4s steps(120,end) ;*/
+/*}*/
+/*@keyframes animate {*/
+/*    0% {*/
+/*        background-position: -1000%;*/
+/*    }*/
+
+/*}*/
+
+
+.p-2{
+    font-family: "DejaVu Math TeX Gyre";
+    font-size: 20px;
+}
+
+.my-0{
+    font-size: 30px;
+    font-family: "DejaVu Math TeX Gyre";
+}
+
+a{
+    text-decoration: none;
+    color: red;
+}
+
+/*.contacts{*/
+/*    background: lightblue url("artezian.png") no-repeat fixed center;*/
+/*    background-size: 100%;*/
+/*}*/
+
+/*.about{*/
+/*    background: lightblue url("2Fm6.gif") no-repeat fixed center;*/
+/*    background-size: 100%;*/
+/*}*/
+.lorem{
+    color: black;
+    font-size: 24px;
+    font-style: italic;
+}
+
+/*.makers{*/
+/*    background: cadetblue;*/
+/*}*/
+
+/*.zakaz{*/
+/*    background: lightblue url("zakaz.jpg") no-repeat fixed center;*/
+/*    background-size: 100%;*/
+/*}*/
+/*.clients{*/
+/*    background: lightblue url("clients.png") no-repeat fixed center;*/
+/*    background-size: 100%;*/
+/*}*/
+/*.infoclients{*/
+/*    color: black;*/
+/*    font-size: 20px;*/
+/*    font-style: italic;*/
+/*}*/

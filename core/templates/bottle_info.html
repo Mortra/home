@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block page %}
+    <h1>Инфо напитков</h1>
+    <div>Объем: {{bottle.volume}}</div>
+    <div>Адрес: {{bottle.maker}}</div>
+    <div>Описание: {{bottle.description}}</div>
+    <div>Expired: {{bottle.expired}}</div>
+
+{% endblock %}

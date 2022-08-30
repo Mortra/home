@@ -1,0 +1,21 @@
+<div style="height: 150%">
+    {% extends 'base.html' %}
+    {% block page %}
+        <h1>Инфо клиента</h1>
+        <div>Имя: {{client.name}}</div>
+        <div>Фамилия: {{client.last_name}}</div>
+        <div>Адрес: {{client.address}}</div>
+        <div>Контакты: {{client.contacts}}</div>
+        <div>Активный заказчик: {{client.is_active}}</div>
+        <div>Фото:
+            {% if client.photo %}
+                <img src="{{client.photo.url}}"/>
+            {% else %}
+                <span>Нет фото</span>
+            {% endif %}
+        </div>
+        <br/>
+        <a href="{% url 'update-delete' client.id %}" class="btn btn-info">Редактировать</a>
+        <a href="{% url 'client-delete' client.id %}" class="btn btn-danger">Удалить</a>
+    {% endblock %}
+</div>

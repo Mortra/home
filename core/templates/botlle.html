@@ -1,0 +1,10 @@
+<div>
+    {% extends 'base.html' %}
+    {% block page %}
+        {% for bottle in core %}
+            <div>
+                <a href="{{bottle.id}}/"> {{ bottle.maker }}</a>
+            </div>
+        {% endfor %}
+    {% endblock %}
+</div>

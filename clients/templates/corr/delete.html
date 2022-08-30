@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block page %}
+    <div class="features">
+        <h1>Удалить клиента</h1>
+        <form method="POST">
+            {% csrf_token %}
+            <button class="btn btn-succes" type="submit">Удалить</button>
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block page %}
+    <h1>Инфо заказов</h1>
+<div><h5>Какой напиток: {{order.name}}</h5></div>
+<div><h5>Адресc:  {{order.address}}</h5></div>
+<div><h5>Контакты: {{order.contacts}}</h5></div>
+<div><h5>Описание: {{order.descriptions}}</h5></div>
+
+{% endblock %}

@@ -1,0 +1,11 @@
+<div>
+    <div style="height: 650px">
+        {% extends 'base.html' %}
+        {% block page %}
+            {% for bottle in bottles_list %}
+                <div>{{ bottle.maker }}</div>
+            {% endfor %}
+            <botton type="button" class="btn btn-success">Success</botton>
+        {% endblock %}
+    </div>
+</div>

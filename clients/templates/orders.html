@@ -1,0 +1,27 @@
+<body style="height: 150%">
+    {% extends 'base.html' %}
+    {% block page %}
+<!--    {% for order in clients %}-->
+        <table class="table table-Primary">
+          <thead>
+            <tr>
+              <th scope="col">Адресс</th>
+              <th scope="col">Напитки</th>
+              <th scope="col">Контакты</th>
+              <th scope="col">Перейти</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+                <td>{{order.address}}</td>
+                <td>{{order.name}}</td>
+                <td>{{order.contacts}}</td>
+                <td><a href="{{order.id}}/">Link</a> </td>
+              </tr>
+          </tbody>
+        </table>
+<!--    {% endfor %}-->
+    {% endblock %}
+    <br/>
+
+</body>

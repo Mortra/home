@@ -1,0 +1,14 @@
+<body class="create">
+{% extends 'base.html' %}
+{% block page %}
+    <form method="post">
+      {% csrf_token %}
+          <div><input name="name" type="text" placeholder="Имя"></div>
+          <div><input name="last_name" type="text" placeholder="Фамилия"></div>
+          <div><input name="contacts" type="text" placeholder="Ваш номер"></div>
+          <div><input name="address" placeholder="Адресс"></div>
+          <br/>
+      <button type="submit" class="btn btn-info">Добавить</button>
+    </form>
+{% endblock %}
+</body>

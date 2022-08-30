@@ -1,0 +1,29 @@
+<body class="clients">
+    {% extends 'base.html' %}
+    {% block page %}
+        {% for client in clients %}
+            <table class="table table-dark table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Имя</th>
+                    <th scope="col">Фамилия</th>
+                    <th scope="col">Адресс</th>
+                    <th scope="col">Контакты</th>
+                    <th scope="col">Link</th>
+                </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>{{client.name}}</td>
+                <td>{{client.last_name}}</td>
+                <td>{{client.address}}</td>
+                <td>{{client.contacts}}</td>
+                <td><a href="/client/{{client.id}}">Link</a></td>
+                </tr>
+              </tbody>
+            </table>
+        {% endfor %}
+    {% endblock %}
+</body>
+
+
