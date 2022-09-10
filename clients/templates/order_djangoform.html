@@ -1,10 +1,12 @@
 {% extends 'base.html' %}
 
-{% block page %}
 
+
+{% block page %}
+<!--        <h1>{{our_number}}</h1> вызов функции с текстом-->
     <form method="POST">
         {% csrf_token %}
-        {{ order_form.as_p }}
+        {{ form.as_p }}
         <button>Оформить заказ</button>
     </form>
 

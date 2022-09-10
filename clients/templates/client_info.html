@@ -2,11 +2,11 @@
     {% extends 'base.html' %}
     {% block page %}
         <h1>Инфо клиента</h1>
-        <div>Имя: {{client.name}}</div>
-        <div>Фамилия: {{client.last_name}}</div>
-        <div>Адрес: {{client.address}}</div>
-        <div>Контакты: {{client.contacts}}</div>
-        <div>Активный заказчик: {{client.is_active}}</div>
+        <div>Имя: {{object.name}}</div>
+        <div>Фамилия: {{object.last_name}}</div>
+        <div>Адрес: {{object.address}}</div>
+        <div>Контакты: {{object.contacts}}</div>
+        <div>Активный заказчик: {{object.is_active}}</div>
         <div>Фото:
             {% if client.photo %}
                 <img src="{{client.photo.url}}"/>

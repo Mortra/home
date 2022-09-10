@@ -3,11 +3,16 @@
 {% block page %}
     <form method="post">
       {% csrf_token %}
-          <div><input name="name" type="text" placeholder="Название напитка"></div>
-          <div><input name="address" type="text" placeholder="Адресс"></div>
-          <div><input name="contacts" type="text" placeholder="Ваш номер"></div>
-          <div><textarea name="description" cols="30" rows="10" placeholder="Описание"></textarea></div>
-      <button type="submit" class="btn btn-seccess">Оформить заказ</button>
+        <div class="row">
+            <div class="col-5 offset-5">
+                <h1>Оформление заказа</h1>
+                <div><input name="name" type="text" placeholder="Название напитка"></div>
+                <div><input name="address" type="text" placeholder="Адресс"></div>
+                <div><input name="contacts" type="text" placeholder="Ваш номер"></div>
+                <div><textarea name="description" cols="30" rows="10" placeholder="Описание"></textarea></div></br>
+                <button type="submit" class="btn btn-info">Оформить заказ</button>
+            </div>
+        </div>
     </form>
 {% endblock %}
 </body>

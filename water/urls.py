@@ -14,7 +14,8 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.contrib.auth.views import *
+from django.urls import path, include
 from core.views import *
 from clients.views import *
 from django.conf import settings
@@ -24,23 +25,28 @@ from clients import forms
 
 
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('clients/', clients_list),
+    path('clients/', ClientsListView.as_view()),
     path('contacts/', contacts),
     path('about/', about),
-    path('makers/', makers_list),
-    path('photo/', photo, name="client-create"),
-    path('clients/', clients_list, name="client-list"),
-    path('client/<int:id>/', client_detail, name="client-detail"),
-    path('bottle/', bottle_list, name="bottle-list"),
-    path('bottle/<int:id>/', bottle_detail, name="bottle-detail"),
-    path('order/create/', create_order, name="create-order"),
-    path('order/djangoform/', order_djangoform, name="order-djangoform"),
-    path('order/', order_list, name="order-list"),
-    path('order/<int:id>/', order_detail, name="order-detail"),
+    path('', makers_list, name="makers-list"),
+    path('clients/', ClientsListView.as_view(), name="client-list"),
+    path('client/<int:pk>/', ClientDetailView.as_view(), name="client-detail"),
+    path('bottle/', BottleListView.as_view(), name="bottle-list"),
+    path('bottle/<int:pk>/', BottleDetailView.as_view(), name="bottle-detail"),
+    path('order/create/', CreateOrderView.as_view(), name="create-order"),
+    path('order/djangoform/', CreateOrderDjangoForm.as_view(), name="order-djangoform"),
+    path('order/', OrderlistView.as_view(), name="order-list"),
+    path('order/<int:pk>/', OrderDetailViews.as_view(), name="order-detail"),
     path('<int:pk>/delete', forms.DeleteUpdateView.as_view(), name='client-delete'),
-    path('<int:pk>/update', forms.ClientUpdateView.as_view(), name='update-delete')
+    path('<int:pk>/update', forms.ClientUpdateView.as_view(), name='update-delete'),
+    path("login/", LoginUser.as_view(), name="login"),
+    path("logout/", logout_user, name="logout"),
+    path("register/", register, name="register")
+
+
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

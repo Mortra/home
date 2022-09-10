@@ -94,3 +94,19 @@ a{
 /*    font-size: 20px;*/
 /*    font-style: italic;*/
 /*}*/
+
+.button_login{
+    width: 100%;
+    text-align: center;
+}
+/*h3.user{*/
+/*    font-size: 30px;*/
+/*    color: purple;*/
+/*    font-style: italic;*/
+/*    justify-content: center;*/
+/*}*/
+.register{
+    background: lightblue url("register.jpg") no-repeat fixed center;
+    background-size: 100%;
+}
+

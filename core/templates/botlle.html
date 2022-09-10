@@ -1,7 +1,7 @@
 <div>
     {% extends 'base.html' %}
     {% block page %}
-        {% for bottle in core %}
+        {% for bottle in object_list %}
             <div>
                 <a href="{{bottle.id}}/"> {{ bottle.maker }}</a>
             </div>

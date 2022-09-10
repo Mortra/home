@@ -1,11 +1,96 @@
-<div>
-    <div style="height: 650px">
-        {% extends 'base.html' %}
+<div style="height: 200%">
+    {% extends 'base.html' %}
         {% block page %}
-            {% for bottle in bottles_list %}
-                <div>{{ bottle.maker }}</div>
+            <div class="row">
+              <div class="col-sm-4 lang_wrapper">
+                <ul class="language-chooser language-chooser-text qtranxs_language_chooser" id="qtranslate-chooser">
+                <li class="lang-ru active"><a href="/" title="Русский (ru)" class="qtranxs_text qtranxs_text_ru"><span>Русский</span></a></li>
+                <li class="lang-en"><a href="/" title="English (en)" class="qtranxs_text qtranxs_text_en"><span>English</span></a></li>
+                <li class="lang-kg"><a href="/" hreflang="/" title="Кыргызча (kg)" class="qtranxs_text qtranxs_text_kg"><span>Кыргызча</span></a></li>
+                </ul><div class="qtranxs_widget_end"></div>
+              </div>
+            </div>
+            <br/>
+            <main>
+                <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+                  <div class="col">
+                    <div class="card mb-4 rounded-3 shadow-sm">
+                      <div class="card-header py-3">
+                        <h2 class="my-0 fw-normal">20л</h2>
+                      </div>
+                      <div class="card-body">
+                        <h1 class="card-title pricing-card-title">500<small class="text-muted fw-light">сом</small></h1>
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li>По городу</li>
+                            <li>Доставка бесплатно</li>
+                          <li>Источник жизни</li>
+                          <h3>Sk company</h3>
+                        </ul>
+                        <button type="button" class="w-100 btn btn-lg btn-outline-primary"><a href="{% url 'create-order' %}">Заказать</a></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card mb-4 rounded-3 shadow-sm">
+                      <div class="card-header py-3">
+                        <h4 class="my-0 fw-normal">100л</h4>
+                      </div>
+                      <div class="card-body">
+                        <h1 class="card-title pricing-card-title">2000<small class="text-muted fw-light">сом</small></h1>
+                        <ul class="list-unstyled mt-3 mb-4">
+                          <li>По городу</li>
+                          <li>Доставка бесплатно</li>
+                          <li>Источник жизни</li>
+                          <h3>Sk company</h3>
+                        </ul>
+                        <button type="button" class="w-100 btn btn-lg btn-outline-info"><a href="{% url 'create-order' %}">Заказать</a></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card mb-4 rounded-3 shadow-sm">
+                      <div class="card-header py-3">
+                        <h4 class="my-0 fw-normal">1т</h4>
+                      </div>
+                      <div class="card-body">
+                        <h1 class="card-title pricing-card-title">18000<small class="text-muted fw-light">сом</small></h1>
+                        <ul class="list-unstyled mt-3 mb-4">
+                          <li>По городу</li>
+                          <li>Доставка бесплатно</li>
+                          <li>Источник жизни</li>
+                          <h3>Sk company</h3>
+                        </ul>
+                        <button type="button" class="w-100 btn btn-lg btn-outline-primary"><a href="{% url 'create-order' %}">Заказать</a></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <h1 class="display-6 text-center mb-4" style="font-family: Arial">Последние заказы</h1>
+                          {% for bottle in bottles_list %}
+                <table class="table table-Info">
+                <thead>
+                    <tr>
+                        <th scope="col">Название</th>
+                        <th scope="col">Объeм</th>
+                    </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                      <td>{{bottle.maker}}</td>
+                      <td>{{bottle.volume}}</td>
+                    </tr>
+                  </tbody>
+                </table>
             {% endfor %}
-            <botton type="button" class="btn btn-success">Success</botton>
+              </main>
         {% endblock %}
-    </div>
 </div>
+
+
+
+
+<!--            {% for bottle in bottles_list %}-->
+<!--                <div>{{ bottle.maker }}</div>-->
+<!--            {% endfor %}-->
+<!--            <botton type="button" class="btn btn-success">Success</botton>-->

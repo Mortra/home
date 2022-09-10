@@ -9,7 +9,7 @@ class OrderAdmin(admin.ModelAdmin):
     model = Order
     list_display = ["name", "contacts", "created_at", "finished"]
     list_editable = ["contacts", "finished"]
-    fields = ["name", "contacts", "create_at", "update_at", "description", "finished"]
+    fields = ["name", "client", "contacts", "create_at", "update_at", "description", "finished"]
     readonly_fields = ["created_at", "update_at"]
 
 #регистрируем моделя каждый раз когда создаем
